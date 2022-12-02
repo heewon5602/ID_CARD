@@ -26,4 +26,7 @@ Initially, we wanted to scan a identification card to extract a square and extra
 ---
 
 ## **5. Demonstration video**  
+* Demonstration video of resident registration 1(Human version)
 ![](mosaic.mov.gif)
+* Demonstration video of resident registration 2(Character version)
+![](dooly_video.gif)
