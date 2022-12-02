@@ -40,5 +40,18 @@ for j,cnt in enumerate(hulls):
     x, y, w, h = cv2.boundingRect(cnt)
     cv2.rectangle(clone,(x, y), (x+w, y+h), (0,255,0), 1)
 
+win_title='mosaic'
+while True:
+    x,y,w,h = cv2.selectROI(win_title, clone, False) 
+    if w and h:
+        roi = clone[y:y+h, x:x+w]  
+        roi = cv2.resize(roi, (w//15, h//15)) 
+        roi = cv2.resize(roi, (w,h), interpolation=cv2.INTER_AREA)  
+        clone[y:y+h, x:x+w] = roi   
+        cv2.imshow(win_title, clone) 
+    else:
+        break
+    
 cv2.imshow('mser', clone)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
