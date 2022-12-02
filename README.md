@@ -32,4 +32,7 @@ Initially, we wanted to scan a identification card to extract a square and extra
 ![](dooly_video.gif)
 
 ## **6. Reference Data**
-* [Code for blurring a picture](https://scribblinganything.tistory.com/499)
+* [Code for blurring a picture](https://scribblinganything.tistory.com/499)  
+* [Code for extracting texts in images](https://webnautes.tistory.com/1449)    
+* [ID card(person) images](https://www.mois.go.kr/frt/sub/a06/b06/IDCard/screen.do)  
+* [ID card(dooly) images](https://zzznara.tistory.com/307)
