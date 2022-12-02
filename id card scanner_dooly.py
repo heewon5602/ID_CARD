@@ -40,18 +40,15 @@ for j,cnt in enumerate(hulls):
     x, y, w, h = cv2.boundingRect(cnt)
     cv2.rectangle(clone,(x, y), (x+w, y+h), (0,255,0), 1)
 
-#관심 영역 지정하여 모자이크 처리하는 코드
-win_title='mosaic'
+title='mosaic'
 while True:
-    x,y,w,h = cv2.selectROI(win_title, clone, False) # 관심영역 선택
+    x,y,w,h = cv2.selectROI(title, clone, False) 
     if w and h:
-        roi = clone[y:y+h, x:x+w]   # 관심영역 지정
-        roi = cv2.resize(roi, (w//15, h//15)) # 1/15 비율로 축소
-        # 원래 크기로 확대
+        roi = clone[y:y+h, x:x+w]   
+        roi = cv2.resize(roi, (w//15, h//15)) 
         roi = cv2.resize(roi, (w,h), interpolation=cv2.INTER_AREA)  
-        clone[y:y+h, x:x+w] = roi   # 원본 이미지에 적용
-        cv2.imshow(win_title, clone) #관심 영역을 마우스로 지정하여 엔터를 누르면 모자이크된 사진 뜸
-        #모자이크 처리 종료하려면 c누르기
+        clone[y:y+h, x:x+w] = roi   
+        cv2.imshow(title, clone) 
     else:
         break
     
