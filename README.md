@@ -30,3 +30,6 @@ Initially, we wanted to scan a identification card to extract a square and extra
 ![](mosaic.mov.gif)
 * Demonstration video of resident registration 2(Character version)
 ![](dooly_video.gif)
+
+## **6. Reference Data**
+* [Code for blurring a picture](https://scribblinganything.tistory.com/499)
